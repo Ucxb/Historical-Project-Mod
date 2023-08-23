@@ -1,0 +1,9 @@
+hr_counter_reformation = {
+    local_religious_conversion_resistance = 2
+}
+eng_anticonvert = {
+    local_missionary_strength = -0.10
+}
+eng_conversion12 = {
+    religious_unity = 0.25
+}

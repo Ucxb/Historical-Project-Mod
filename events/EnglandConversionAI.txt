@@ -1,0 +1,57 @@
+namespace = englandai
+country_event = {
+    id = englandai.1
+    title = "englandai.1.title"
+    desc = "englandai.1.desc"
+    major = yes
+    picture = RELIGIOUS_TURMOIL_eventPicture
+    mean_time_to_happen = {
+        days = 1
+    }
+    trigger = {
+        OR = {
+            religion = anglican
+            religion = protestant
+        }
+        OR = {
+            tag = ENG
+            tag = GBR
+        }
+        any_owned_province = {
+            OR = {
+                culture = irish
+                culture = scottish
+                culture = highland_scottish
+            }
+            NOT = {
+                has_province_modifier = eng_anticonvert
+            }
+        }
+    }
+    option = {
+        name = "englandai.1.optA"
+        custom_tooltip = "englandai_tt"
+        hidden_effect = {
+            add_country_modifier = {
+                    name = eng_conversion12
+                    duration = -1
+                    desc = "eng_conversion12_desc"
+            }
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        culture = irish
+                        culture = scottish
+                        culture = highland_scottish
+                    }
+                }
+                add_permanent_province_modifier = {
+                    name = eng_anticonvert
+                    duration = -1
+                    desc = "eng_anticonvert_desc"
+                }
+            }
+        }
+    }
+}
+

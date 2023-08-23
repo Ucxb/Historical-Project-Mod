@@ -1,0 +1,140 @@
+namespace = historicalai
+
+country_event = {
+    id = historicalai.1 #Add province modifier to Catholic Iberia and Italy
+    title = "historicalai.1.title"
+    desc = "historicalai.1.desc"
+    
+    major = yes
+    fire_only_once = yes
+    
+    mean_time_to_happen = 30
+    
+    picture = RELIGIOUS_TURMOIL_eventPicture
+    
+    trigger = {
+        tag = PAP
+        is_religion_enabled = protestant
+    }
+    
+    option = {
+        name = "historicalai.1.optA"
+        custom_tooltip = "counterreformation_tt"
+        
+        hidden_effect = {
+            italy_region = {
+                limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+            iberia_region = {
+                limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+            mazovia_area = {
+                 limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+			ulster_area = {
+                 limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+			leinster_area = {
+                 limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+			connacht_area = {
+                 limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+			munster_area = {
+                 limit = {
+                    has_owner_religion = yes
+                    religion = catholic
+                }
+                add_permanent_province_modifier = {
+                    name = hr_counter_reformation
+                    duration = -1
+                    desc = "cr_province_tt"
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = historicalai.2 
+    title = "historicalai.2.title"
+    desc = "historicalai.2.desc"
+    
+    hidden = yes
+    fire_only_once = yes
+    is_triggered_only = yes
+        
+    trigger = {
+        AND = {
+            tag = PAP
+            NOT = { current_age = age_of_discovery }
+            NOT = { current_age = age_of_reformation }
+        }
+    }
+    
+    picture = POPE_PREACHING_eventPicture
+    
+    mean_time_to_happen = {
+        months = 1
+    }
+        
+    option = {
+        name = "historicalai.2.optA"
+        
+        italy_region = {
+            remove_province_modifier = hr_counter_reformation
+        }
+        
+        iberia_region = {
+            remove_province_modifier = hr_counter_reformation
+        }
+    }
+}
