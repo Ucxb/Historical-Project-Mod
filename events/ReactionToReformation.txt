@@ -1,4 +1,4 @@
-namespace = historicalai
+namespace = historicalai #hello
 
 country_event = {
     id = historicalai.1 #Add province modifier to Catholic Iberia and Italy
