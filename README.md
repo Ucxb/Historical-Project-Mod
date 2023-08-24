@@ -22,6 +22,7 @@ Colonization Rework
   * Certain colonial nations will be nerfed to prevent the rapid spread and colonization of the entire world.
   * Certain African provinces will be made uncolonizable
   * Non-European nations will no longer colonize
+
 Configuration Options
   * Players will be greeted with a start event upon the launch of the mod that will allow them to configure certain aspects of the mod and disable certain features
 
