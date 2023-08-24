@@ -1,3 +1,0 @@
-eng_anticonvert = {
-    local_missionary_strength = -0.10
-}
